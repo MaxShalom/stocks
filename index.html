@@ -99,7 +99,7 @@ const DEFAULT_PORTFOLIOS = [
       PORTFOLIOS.forEach((p, i) => addPortfolio(p, i === 0));
       symbols = symbols.filter((s, i) => symbols.indexOf(s) === i);
       updateData('addTitle');
-      setInterval(updateData, REFRESH_SECONDS * 1000);
+      setInterval(updateData, REFRESH_SECONDS * 6000);
 
       function addPortfolio(portfolio, includeHeader) {
         let tableHeaderHtml = '';
@@ -111,7 +111,6 @@ const DEFAULT_PORTFOLIOS = [
                 <th class="stock-price">Last</th>
                 <th class="stock-change">Change</th>
                 <th class="stock-change-pct">Change%</th>
-                <th class="stock-mkt-cap">Mkt Cap</th>
               </tr>
             </thead>
           `
